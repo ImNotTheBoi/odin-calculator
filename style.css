@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+}
+
+button {
+    font-size: medium;
+}
