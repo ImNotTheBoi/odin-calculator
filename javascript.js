@@ -42,10 +42,11 @@ function operate() {
             result = divide(+number1, +number2);
             break;
     };
-    number1 = `${result}`
+    let roundedNumber = Math.round(result * 100) / 100
+    number1 = roundedNumber
     number2 = "";
     console.log(`${result}`)
-    return `${result}`
+    return `${roundedNumber}`
 };
 
 function displayText(string, type) {

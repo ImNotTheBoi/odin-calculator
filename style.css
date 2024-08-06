@@ -1,8 +1,24 @@
 body {
     display: flex;
+    height: 100vh;
+    width: 100vw;
     margin: 0px;
     padding: 0px;
     justify-content: center;
+    background-color: #6482AD;
+}
+
+#contentColumn {
+    display: flex;
+    margin-top: auto;
+    height: 95vh;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 16px 32px;
+    background-color: #7FA1C3;
+    border-color: #E2DAD6;
+    border-style: solid;
+    border-bottom-style: none;
 }
 
 button {
