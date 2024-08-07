@@ -70,7 +70,7 @@ function displayText(string, type) {
             else {
                 operate()
                 operation = string
-                display += ` ${string} `
+                display = `${number1} ${string} `
             }
             break;
         case "equal":
@@ -104,6 +104,36 @@ function displayText(string, type) {
             operation = "";
             display = ""
             break;
+        case "decimal":
+            if (number2 === "" && !number1.includes(".") && operation === "") {
+                number1 += string
+                display += string
+                console.log(number1)
+            }
+            else if (operation !== "" && !number2.includes(".")) {
+                number2 += string
+                display += string
+                console.log(number2)
+            }
+            break;
+        case "backspace":
+            if (number2 !== "") {
+                number2 = number2.slice(0, -1);
+                display = display.slice(0, -1);
+                console.log("hello")
+            }
+            else if (operation !== "") {
+                operation = operation.slice(0, -1);
+                display = display.slice(0, -3);
+                console.log("hello")
+            }
+            else if (number1 !== "") {
+                number1 = number1.slice(0, -1);
+                display = display.slice(0, -1);
+                console.log("hello")
+            }
+            break;
+            
     }
     displayElement.textContent = display
 }
@@ -124,6 +154,12 @@ function buttonFunctions(buttons) {
                 break;
             case "keys clear":
                 keyType = "clear"
+                break;
+            case "keys decimal":
+                keyType = "decimal"
+                break;
+            case "keys backspace":
+                keyType = "backspace"
                 break;
         }
         btn.addEventListener("click", () => {
