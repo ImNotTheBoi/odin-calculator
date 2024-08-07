@@ -34,7 +34,7 @@ function operate() {
         case "x":
             result = multiply(+number1, +number2);
             break;
-        case "/":
+        case "÷":
             if (+number2 === 0) {
                 console.log("kys")
                 return "ERROR"
